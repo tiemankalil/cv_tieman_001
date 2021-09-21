@@ -1,0 +1,386 @@
+
+ /* proprietes generales des élements du site  */
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family :'Times New Roman', Times, serif;
+}
+
+/* proprietes du body */
+body {
+
+    background: rgb(255, 255, 0) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+/* proprietes du conteneur principal */
+
+.conteneur {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background: blue;
+    box-shadow: 0 35px 55px  rgba(0,0,0,0.1);
+    margin: 50px;
+    
+}
+
+
+/* proprietes de disposition des blocs secondaires dans le conteneur principal */
+
+.conteneur {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "gauche droit";
+}
+
+/* permutation des deux blocs gauche et droit */
+
+.conteneur.flipped {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "droit gauche";
+}
+
+
+
+/* proprietes box photo de profil */
+
+.profileText {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 10px solid rgba(225,225,225,0.2);
+}
+
+
+.profileText .imgBox {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 15%;
+    overflow: hidden;     
+}  
+
+.profileText .imgBox:hover{
+    border-radius: 50%;
+
+}
+
+p:hover{
+    background-color: black;
+    color: white;
+    font-size: x-large;
+
+}
+
+.profileText .imgBox img {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.profileText h2 {
+
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+
+}
+
+.profileText h2 span {
+    font-size: 0.8em;
+    font-weight: 300;
+
+}
+
+
+/* proprietes box ibformations contact */
+.contactInfo {
+    padding-top: 40px;
+    border-bottom: 10px solid rgba(225,225,225,0.2);
+
+
+}
+
+.title {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+
+}
+
+
+
+.contactInfo  ul {
+    position: relative;
+    font-size: 1em;
+    font-weight: bold;
+
+}
+
+.contactInfo  ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif ;
+
+}
+
+
+
+.formationInfo {
+    padding-top: 40px;
+    border-bottom: 10px solid rgba(225,225,225,0.2);
+
+}
+
+.formationInfo li {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+
+}
+
+.formationInfo h5 {
+    color: royalblue;
+    font-weight: 500;
+}
+
+.formationInfo h4 {
+    color: #fff;
+    font-weight: 500;
+}
+
+.langue {
+    padding: 20px;
+    border-bottom: 10px solid rgba(225,225,225,0.2);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    
+}
+
+.langue li {
+    margin: 10px;
+      
+}
+
+.langue li h3 {
+    
+    text-transform: uppercase;
+    color: darkviolet;
+    margin: 10px;
+    font-size: 1.2em;
+}
+
+.divers {
+    padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+ }
+
+ .text {
+     margin: 10px;
+ }
+.conteneur .gauche {
+
+    position: relative;
+    background: brown;
+    padding: 40px;
+    grid-area: gauche;
+}
+
+
+
+
+
+.apropos {
+    margin-bottom: 50px;
+
+}
+
+.title2 {
+    color: blueviolet;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+
+}
+
+p {
+    color:red;
+    font-size: 1.5em;
+}
+
+
+.apropos .box {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+    font-size: 1.5em;
+}
+
+.apropos .box .annee {
+    min-width: 150px;
+
+}
+
+.apropos .box .annee h5 {
+    text-transform: uppercase;
+    color: darkmagenta;
+    font-weight: 600;
+
+}
+
+.apropos .box .text h4 {
+    text-transform: uppercase;
+    color: darkslateblue;
+    font-size: 16px;
+
+}
+
+
+.competences .box {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.competences .box {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+
+.competences .box h4 {
+    text-transform: uppercase;
+    color: darkviolet;
+    font-weight: 500;
+    margin: 20px;
+
+}
+
+.droit .interets  ul {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+}
+
+.interets ul li {
+    list-style: none;
+    color: dimgrey;
+    font-weight: bold;
+    margin: 10px 0;
+    overflow: hidden;
+   
+
+}
+
+.interets img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+.conteneur .droit {
+
+    position: relative;
+    background:#fff;
+    padding: 40px;
+    grid-area: droit;
+   
+}
+
+
+/* proprietes responsive  */
+
+
+
+@media screen and (max-width : 1000px)
+{
+
+    .conteneur {
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+        }
+
+    .interets ul {
+        grid-template-columns: repeat(1,1fr);
+
+    }
+}
+
+
+@media (max-width : 600px)
+{
+
+    .profileText h2 {
+        font-size: 1.2em;
+    }
+
+    .apropos .box {
+      flex-direction: column;
+
+        }
+
+    .apropos .box .annee  {
+        margin-bottom: 5px;
+
+        
+    }
+
+    .interets ul {
+        grid-template-columns: repeat(1,1fr);
+
+    }
+    .competences .box {
+        grid-template-columns: repeat(1,1fr);
+
+    }
+    .conteneur{
+        display: block;
+        font-size: 1.2em;
+    }
+
+    .droit .interets ul {
+        display:block ;
+    }
+
+    .title2 {
+        font-size: 1.1em;
+    }
+
+    .contactInfo ul li{
+        font-size: 0.9em;
+        padding: 0;
+    }
+    .competences .box h4 {
+        font-size: 0.8em;
+    }
+    body {
+        margin: 10px;
+    }
+
+}
